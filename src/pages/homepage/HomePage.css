@@ -1,0 +1,93 @@
+.home-hero {
+  background: radial-gradient(ellipse at top, var(--beige) 20%, #ffffff 80%);
+  padding: 6rem 1.5rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-content {
+  max-width: 700px;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--espresso);
+  margin-bottom: 1rem;
+}
+
+.home-subtitle {
+  font-size: 1.25rem;
+  color: #4f4f4f;
+  margin-bottom: 2rem;
+}
+
+.home-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 3rem;
+  color: var(--coffee);
+  font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.home-button {
+  padding: 0.85rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.home-button.primary {
+  background-color: var(--espresso);
+  color: white;
+}
+
+.home-button.primary:hover {
+  background-color: var(--coffee);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.home-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* Simple staggered fade-up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
+.delay-4 {
+  animation-delay: 0.8s;
+}

@@ -1,0 +1,36 @@
+.not-found-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--beige);
+  color: var(--espresso);
+  text-align: center;
+  padding: 2rem;
+}
+
+.not-found-container h1 {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.not-found-container p {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.not-found-link {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: var(--coffee);
+  font-weight: 500;
+  border: 1px solid var(--coffee);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.not-found-link:hover {
+  background-color: var(--coffee);
+  color: var(--beige);
+}

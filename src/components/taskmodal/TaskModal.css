@@ -1,0 +1,131 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(43, 29, 22, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-paper {
+  background-color: var(--beige);
+  color: var(--espresso);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 520px;
+  max-width: 90%;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  animation: scaleIn 0.2s ease-in-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.delete-button {
+  background-color: transparent;
+  color: var(--espresso);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.delete-button:hover {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.modal-content {
+  margin-bottom: 2rem;
+}
+
+.modal-view-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.modal-view-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--coffee);
+}
+
+.modal-input,
+.modal-textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.modal-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.modal-actions button {
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--coffee);
+  color: var(--beige);
+  transition: background-color 0.2s ease;
+}
+
+.modal-actions button:first-child {
+  background-color: transparent;
+  color: var(--espresso);
+  border: 1px solid var(--espresso);
+}
+
+.modal-actions button:first-child:hover {
+  background-color: var(--light-gray);
+}
+
+.modal-actions button:hover:not(:first-child) {
+  background-color: var(--espresso);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* optional reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --espresso: #2b1d16;
+  --coffee: #3a2e28;
+  --beige: #f3efed;
+  --light-gray: #f9f9f9;
+  --shadow: rgba(0, 0, 0, 0.05);
+}
