@@ -1,6 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
-import LoginButton from "../../components/common/authbutton/LoginButton";
+import LoginButton from "../../components/authbutton/LoginButton";
 import "./HomePage.css";
 
 const HomePage: React.FC = () => {

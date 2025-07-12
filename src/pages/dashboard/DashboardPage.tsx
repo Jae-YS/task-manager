@@ -7,6 +7,7 @@ import FilterBar from "../../components/dashboard/FilterBar";
 import TaskList from "../../components/dashboard/TaskList";
 import PaginationControls from "../../components/dashboard/PaginationControls";
 import "./DashboardPage.css";
+import useFilteredTasks from "../../hooks/useFilteredTasks";
 import type { Task } from "../../types/Task";
 import { toast } from "react-toastify";
 import ConfirmModal from "../../components/taskmodal/ConfirmModal";
@@ -62,20 +63,11 @@ const DashboardPage: React.FC = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  let filteredTasks = [...tasks];
-  if (statusFilter)
-    filteredTasks = filteredTasks.filter((t) => t.status === statusFilter);
-  if (priorityFilter)
-    filteredTasks = filteredTasks.filter((t) => t.priority === priorityFilter);
-  if (dueDateSort === "asc") {
-    filteredTasks.sort(
-      (a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime()
-    );
-  } else if (dueDateSort === "desc") {
-    filteredTasks.sort(
-      (a, b) => new Date(b.dueDate).getTime() - new Date(a.dueDate).getTime()
-    );
-  }
+  const filteredTasks = useFilteredTasks(tasks, {
+    status: statusFilter,
+    priority: priorityFilter,
+    dueDateSort,
+  });
 
   const totalPages = Math.ceil(filteredTasks.length / TASKS_PER_PAGE);
   const paginatedTasks = filteredTasks.slice(

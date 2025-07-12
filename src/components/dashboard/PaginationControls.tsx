@@ -17,7 +17,9 @@ const PaginationControls: React.FC<PaginationProps> = ({
         <button
           key={i + 1}
           onClick={() => onPageChange(i + 1)}
-          className={currentPage === i + 1 ? "active" : ""}
+          className={`pagination-button ${
+            currentPage === i + 1 ? "active" : ""
+          }`}
         >
           {i + 1}
         </button>
